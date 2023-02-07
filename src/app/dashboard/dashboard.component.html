@@ -1,0 +1,14 @@
+<h1>{{ nomeAtivo }}</h1>
+
+<mat-slide-toggle (change)="onChange()" [(ngModel)]="updateData"
+  >Atualizar automaticamente (60 segundos)
+</mat-slide-toggle>
+
+<mat-tab-group>
+  <mat-tab label="Tabela">
+    <app-table-variation [dataBase]="variation"></app-table-variation>
+  </mat-tab>
+  <mat-tab label="Gráfico">
+    <app-line-chart [data]="variation"></app-line-chart>
+  </mat-tab>
+</mat-tab-group>
